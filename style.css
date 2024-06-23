@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100%;
+    height: 100vh;
+    font-family: Neue montreal;
+}
+
+
+.pre-loader{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    /* height: 100%; */
+    display: flex;
+    z-index: 2;
+    color: #fff;
+}
+
+.count{
+    flex: 2;
+    text-align: right;
+    line-height: 1;
+    padding: 0 1em;
+}
+
+.copy{
+    flex: 6;
+    font-size: 30px;
+    padding: 0 1em; 
+    text-transform: uppercase;
+    line-height: 1;
+}
+.m16{
+    overflow: hidden;
+    /* font-size: 16px; */
+}
+
+.m16 .letter{
+    display: inline-block;
+    line-height: 1em;
+}
+
+.loader-bg{
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff0000;
+    z-index: -1;
+}
+
+.loader-2{
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    background: url("https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat 50% 50%;
+    background-size: cover;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.side-content{
+    position: relative;
+    width: 100%;
+    z-index: -2;
+}
+
+nav{
+    width: 100%;
+    padding: 2em;
+    display: flex;
+
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+nav > div{
+    flex: 1;
+}
+.links{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5em;
+}
+
+.header{
+    display: flex;
+    padding: 1em;
+}
+
+.header h1{
+    flex: 1;
+    position: relative;
+    font-size: 19vw;
+    font: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.header .dev{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    bottom: -26%;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+footer > div{
+    flex: 1;
+}
+.footer-content p{
+    width: 40%;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+}
+.img{
+    width: 225px;
+    height: 150px;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+}
+.img:nth-child(1){
+    background:url("https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") 50% 50%;
+    background-size: cover;
+}
+.img:nth-child(2){
+    background: url("https://images.pexels.com/photos/10220490/pexels-photo-10220490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") 50% 50%;
+    background-size: cover;
+}
+
+@media screen and (max-width: 900px) {
+    /* .pre-loader{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    } */
+    footer{
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .footer-content p{
+        width: 100%;
+    }
+    .footer-nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
